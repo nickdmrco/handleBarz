@@ -1,1 +1,2 @@
-# handleBarz
+# handleBarz 
+Learning and testing Handlebars.
