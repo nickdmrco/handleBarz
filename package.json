@@ -1,0 +1,28 @@
+{
+  "name": "handlebarz",
+  "version": "1.0.0",
+  "description": "Learning and testing Handlebars.",
+  "main": "server.js",
+  "dependencies": {
+    "express-handlebars": "^5.2.0",
+    "express": "^4.17.1",
+    "handlebars": "^4.7.6",
+    "mysql2": "^2.2.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nickdmrco/handleBarz.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nickdmrco/handleBarz/issues"
+  },
+  "homepage": "https://github.com/nickdmrco/handleBarz#readme"
+}

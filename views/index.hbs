@@ -1,1 +1,44 @@
-<h1>{{ fav }}: {{ thing }}</h1>
+<h1>Welcome to Platinum Burger!!!</h1>
+
+<div class="container">
+ <div class="row">
+  <form>
+   <p>
+    <label for="name">Burger Name!</label>
+    <input type="text" name="name" id="name">
+   </p>
+   <p>
+    <button id="addBurger">Add Burger</button>
+   </p>
+  </form>
+ </div>
+ <div class="row">
+  <div class="col-md-6">
+   <h4>Waiting</h4>
+   {{#each burgers}}
+   {{#unless this.devoured}}
+   <div class="card">
+    <div class="card-body">
+     <p>
+      {{ this.name }}
+      <button data-id="{{this.id}}" type="button" class="devour btn btn-danger" style="float:right;">Devour it!</button>
+     </p>
+    </div>
+   </div>
+   {{/unless}}
+   {{/each}}
+  </div>
+  <div class="col-md-6">
+   <h4>Devoured</h4>
+   {{#each burgers}}
+   {{#if this.devoured}}
+   <div class="card">
+    <div class="card-body">
+     <p data-id="{{this.id}}">{{ this.name }}</p>
+    </div>
+   </div>
+   {{/if}}
+   {{/each}}
+  </div>
+ </div>
+</div>
