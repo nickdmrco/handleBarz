@@ -3,19 +3,19 @@ const burger = require('../models/burger.js')
 
 
 router.get('/burgers', (req, res) =>
- burger.selectAll(burgers =>
+ burger.all(burgers =>
   res.render('index', { burgers })))
 
 router.post('/burgers', (req, res) =>
- burger.insertOne(req.body, () =>
+ burger.create(req.body, () =>
   res.sendStatus(200)))
 
 router.put('/burgers/:id', (req, res) =>
- burger.updateOne(req.body, req.params.id, () =>
+ burger.update(req.body, req.params.id, () =>
   res.sendStatus(200)))
 
 router.delete('/burgers/:id', (req, res) =>
- burger.deleteOne(req.params.id, () =>
+ burger.delete(req.params.id, () =>
   res.sendStatus(200)))
 
 module.exports = router
